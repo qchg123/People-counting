@@ -16,17 +16,17 @@
 
   <script>
   // Your web app's Firebase configuration
-    var firebaseConfig = {
+    var Config = {
       apiKey: "AIzaSyDP7w-CuCEN4tcptBrVo4XmP-60VNr0yik",
       authDomain: "pre-test-7cf62.firebaseapp.com",
       databaseURL: "https://pre-test-7cf62.firebaseio.com",
       projectId: "pre-test-7cf62",
-      storageBucket: "",
+      storageBucket: "pre-test-7cf62.firebaseapp.com",
       messagingSenderId: "296343001562",
       appId: "1:296343001562:web:6d3a3d7b20f3e632"
     };
   // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(Config);
     
     var bigOne = document.getElementById('bigOne');
     var dbRef = firebase.database().ref().child('text');
