@@ -1,10 +1,11 @@
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>People Counting</title>
   </head>
   <body>
-  <h1 id="what"></h1>  
+  <h1 id="bigOne"></h1>  
     
     
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -27,13 +28,10 @@
   // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     
-    var what = document.getElementById('what');
+    var bigOne = document.getElementById('bigOne');
     var dbRef = firebase.database().ref().child('text');
-    dbRef.on('value',snap => what.innerText = snap.val());
+    dbRef.on('value', snap =>bigOne.innerText = snap.val());
     
   </script>
-    
-    
-    
   </body>
 </html>
