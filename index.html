@@ -16,6 +16,12 @@
     Click me to display Date and Time.</button>
     
     <p id="demo"></p>
+    
+    <pre id = "object">
+    const dbRefobject = firebase.database().ref().child('object');
+    
+    dbRefobject.on('value', snap=> console.log(snap.val()));
+    </pre>
   </body>
   
 </html>
