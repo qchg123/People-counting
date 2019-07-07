@@ -13,17 +13,36 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
     
-  <h1 id="bigOne"></h1>  
-    
-    
   
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA_64nvoL4vycEjrq_Rb10acAgcwjLmu2E",
+      authDomain: "st-pc-f86d8.firebaseapp.com",
+      databaseURL: "https://st-pc-f86d8.firebaseio.com",
+      projectId: "st-pc-f86d8",
+      storageBucket: "",
+      messagingSenderId: "430747960826",
+      appId: "1:430747960826:web:dba4f33fe252b267"
+      };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>  
+    
+  <h1>bigOne</h1> 
   
     
     var bigOne = document.getElementById('bigOne');
     var dbRef = firebase.database().ref().child('text');
     dbRef.on('value', snap =>bigOne.innerText = snap.val());
     
-  </script>
+  
   <h2>PEOPLE COUNTING SYSTEM</h2>
     
   </body>
