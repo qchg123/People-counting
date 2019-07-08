@@ -1,36 +1,43 @@
 
 <html>
+  
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>People Counting</title>
   </head>
+  
   <body>
-  <h1 id="bigOne"></h1> 
-  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+  <h1 id="bigOne">21324</h1> 
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="file:///C:/Users/Think/Desktop/People%20Counting_files/firebase-app.js.%E4%B8%8B%E8%BD%BD"></script>
+  <script src="./People Counting_files/firebase-auth.js.下载"></script>
+  <script src="./People Counting_files/firebase-database.js.下载"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
   <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyA_64nvoL4vycEjrq_Rb10acAgcwjLmu2E",
-      authDomain: "st-pc-f86d8.firebaseapp.com",
-      databaseURL: "https://st-pc-f86d8.firebaseio.com",
-      projectId: "st-pc-f86d8",
-      storageBucket: "",
-      messagingSenderId: "430747960826",
-      appId: "1:430747960826:web:dba4f33fe252b267"
-      };
-    firebase.initializeApp(firebaseConfig);
-  
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_64nvoL4vycEjrq_Rb10acAgcwjLmu2E",
+    authDomain: "st-pc-f86d8.firebaseapp.com",
+    databaseURL: "https://st-pc-f86d8.firebaseio.com",
+    projectId: "st-pc-f86d8",
+    storageBucket: "",
+    messagingSenderId: "430747960826",
+    appId: "1:430747960826:web:dba4f33fe252b267"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+      
+
     
   
-  
-    
-    var bigOne = document.getElementById('bigOne');
-    var dbRef = firebase.database().ref().child('text');
-    dbRef.on('value', snap =>bigOne.innerText = snap.val());
-  </script>    
-  
-  <h2>PEOPLE COUNTING SYSTEM</h2>
-    
+
+  </script>
   </body>
 </html>
