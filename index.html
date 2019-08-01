@@ -72,9 +72,9 @@
         <b style="padding:10px 10px 10px 20px"><font size="5">DATE</font></b>
         <text id="datetime"></text>
 
-        <table border="1" align="center" style="margin-top:100px;margin-left:80px">
+        <table border="0" align="center" style="margin-top:100px;margin-left:80px">
             <tr style="height:100px">
-                <th style="width:300px"><h1>Number of People</h1></th>
+                <th style="width:300px"><h1>Number of People:</h1></th>
                 <th style="width:200px"><h1 id="bigOne"></h1></th>
             </tr>
 
@@ -127,7 +127,7 @@
 
         var bigOne = document.getElementById('bigOne');
 
-        var dbRef = firebase.database().ref().child('text');
+        var dbRef = firebase.database().ref().child(building).child(location1);
 
         dbRef.on('value', snap => bigOne.innerText = snap.val());
     </script>
