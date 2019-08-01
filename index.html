@@ -127,7 +127,7 @@
 
         var bigOne = document.getElementById('bigOne');
 
-        var dbRef = firebase.database().ref().child(building).child(location1);
+        var dbRef = firebase.database().ref().child('building').child('location1');
 
         dbRef.on('value', snap => bigOne.innerText = snap.val());
     </script>
